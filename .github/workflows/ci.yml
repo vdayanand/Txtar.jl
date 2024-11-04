@@ -32,9 +32,3 @@ jobs:
         run: |
           julia --project=. -e 'using Pkg; Pkg.test()'
 
-      - name: Upload coverage results
-        if: success()
-        run: |
-          julia --project=. -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
