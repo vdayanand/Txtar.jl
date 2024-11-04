@@ -2,6 +2,8 @@
 
 `Txtar.jl` is a Julia package for handling text archives in the [Txtar format](https://pkg.go.dev/golang.org/x/tools/txtar#hdr-Txtar_format). This package provides functionality to parse, format, and extract content from Txtar archives.
 
+[![Build Status](https://github.com/vdayanand/Txtar.jl/workflows/CI/badge.svg)](https://github.com/vdayanand/Txtar.jl/actions?query=workflow%3ACI+branch%3Amain)
+
 ## Installation
 
 To install `Txtar.jl`, you can use the Julia package manager:
