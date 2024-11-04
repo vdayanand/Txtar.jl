@@ -1,6 +1,6 @@
 name = "Txtar"
 uuid = "2ff7fb67-0b19-4596-a253-8a4967e84b26"
-authors = ["vdayanand <venkatesh@juliacomputing.com>"]
+authors = ["vdayanand <venkybajal@gmail.com>"]
 version = "0.1.0"
 
 [deps]
