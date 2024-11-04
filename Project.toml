@@ -1,0 +1,13 @@
+name = "Txtar"
+uuid = "2ff7fb67-0b19-4596-a253-8a4967e84b26"
+authors = ["vdayanand <venkatesh@juliacomputing.com>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
