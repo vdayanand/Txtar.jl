@@ -1,7 +1,6 @@
 module Txtar
 # spec: https://pkg.go.dev/golang.org/x/tools/txtar#hdr-Txtar_format
 
-public Archive, extract, format, parse
 struct File
     name::String
     content::String
