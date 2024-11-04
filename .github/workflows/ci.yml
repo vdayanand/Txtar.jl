@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        julia-version: ['1.10']
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.julia-version }}
+
+      - name: Install dependencies
+        run: |
+          julia --project=. -e 'using Pkg; Pkg.instantiate()'
+
+      - name: Run tests
+        run: |
+          julia --project=. -e 'using Pkg; Pkg.test()'
+
+      - name: Upload coverage results
+        if: success()
+        run: |
+          julia --project=. -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
