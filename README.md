@@ -2,6 +2,8 @@
 
 `Txtar.jl` is a Julia package for handling text archives in the [Txtar format](https://pkg.go.dev/golang.org/x/tools/txtar#hdr-Txtar_format). This package provides functionality to parse, format, and extract content from Txtar archives.
 
+This is useful when writing unit tests as it allows you to store test cases, expected outputs, and other relevant files in a single, easily readable format (git diff friendly compared to other archiving formats). This can simplify test data management and help keep tests self-contained and well-organized.
+
 [![Build Status](https://github.com/vdayanand/Txtar.jl/workflows/CI/badge.svg)](https://github.com/vdayanand/Txtar.jl/actions?query=workflow%3ACI+branch%3Amain)
 
 ## Installation
@@ -22,10 +24,6 @@ A Txtar archive consists of a comment section and a list of files, each with a n
 - `extract`: Extracts the files in an `Archive` to a specified directory.
 - `format`: Converts an `Archive` to a string in Txtar format.
 - `parse`: Parses a string in Txtar format to an `Archive` object.
-
-## Why Txtar?
-
-Txtar is particularly useful when writing unit tests as it allows you to store test cases, expected outputs, and other relevant files in a single, easily readable format. This can simplify test data management and help keep tests self-contained and well-organized.
 
 ## Examples
 
